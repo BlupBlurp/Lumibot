@@ -21,7 +21,7 @@ module.exports = {
 			embed
 				.setTitle("Battle Gimmicks")
 				.setDescription(
-					"**We aren't doing any of them.** No Megas, Z-Moves, Dynamaxing or Tera. They would simply be a full nightmare to balance and would only make the game less cohesive.\n\nPKHex-only access has been discussed internally, and more details will eventually be released as we figure out what is feasible.",
+					"**We aren't balancing the game around them.** If and when these mechanics are cracked, there will be options to activate them yourself using out-of-game means. As of now, only Megas will be available this way when Re:Lumi launches.\n\nWe will not be restructuring the base game to involve these mechanics. You can turn them on yourself if you want (the method of which is still up in the air). We are figuring these things out so future mods can use them to their liking; we are not one of those mods.",
 				);
 		else if (message.content.toLowerCase().includes("chibi"))
 			embed

@@ -2,7 +2,11 @@
 
 const { Collection, ChannelType } = require("discord.js");
 const { prefix, owner } = require("../config.json");
-const { containsSpam, handleSpam } = require("./spamUtils.js");
+const {
+	containsSpam,
+	handleSpam,
+	handleChannelBurstSpam,
+} = require("./spamUtils.js");
 const { containsEmulator, handleEmulator } = require("./emulatorUtils.js");
 
 // Prefix regex, we will use to match in mention prefix.
@@ -22,6 +26,14 @@ module.exports = {
 		// Declares const to be used.
 
 		const { client, guild, channel, content, author } = message;
+
+		// Rapid cross-channel spam checks
+		const handledBurstSpam = await handleChannelBurstSpam(message);
+
+		if (handledBurstSpam) {
+			console.log(`Found burst spam: ${author.username}:${content}`);
+			return;
+		}
 
 		// Anti-spam checks
 		const isSpam = await containsSpam(message);

@@ -13,9 +13,9 @@ module.exports = {
 				name: "Team Lumi",
 			})
 			.setTitle("DJ - Noun.")
-			.setDescription(`The best person on the Lumi team.`)
+			.setDescription(`Sadly, in Shattered Platinum, DJ is no more.`)
 			.setImage(
-				"https://archives.bulbagarden.net/media/upload/4/4c/0133Eevee.png",
+				"https://i.imgur.com/IlZmlZN.png",
 			)
 			.setColor(0x000000);
 

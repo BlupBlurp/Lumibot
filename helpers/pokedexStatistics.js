@@ -43,42 +43,48 @@ function createGraphVisualization(pokemonInfo) {
 				},
 			],
 		},
-		options: {
-			scale: {
+	options: {
+		scales: {
+			r: {
+				beginAtZero: true,
+				max: 260,
 				ticks: {
 					display: false,
-					beginAtZero: true,
-					max: 260,
 					stepSize: 260,
 				},
 				angleLines: {
 					display: true,
 					color: "rgba(102,121,207,255)",
 				},
-				gridLines: {
+				grid: {
 					display: true,
 					color: "rgba(102,121,207,255)",
 				},
 				pointLabels: {
 					display: true,
 					padding: 15,
-					fontColor: "rgba(255, 255, 255, 255)",
-					fontSize: 11,
-					fontStyle: "bold",
+					color: "rgba(255, 255, 255, 255)",
+					font: {
+						size: 11,
+						weight: "bold",
+					},
 				},
 			},
-			layout: {
-				padding: {
-					left: 0,
-					right: 0,
-					top: 0,
-					bottom: 15,
-				},
-			},
+		},
+		plugins: {
 			legend: {
 				display: false,
 			},
 		},
+		layout: {
+			padding: {
+				left: 0,
+				right: 0,
+				top: 0,
+				bottom: 15,
+			},
+		},
+	},
 	};
 
 	return canvasRenderService.renderToBuffer(configuration);

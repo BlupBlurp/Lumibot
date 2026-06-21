@@ -28,7 +28,8 @@
 	"homepage": "https://luminescent.team/",
 	"dependencies": {
 		"@discordjs/rest": "^1.6.0",
-		"chartjs-node-canvas": "^3.1.0",
+		"chartjs-node-canvas": "^5.0.0",
+		"chart.js": "^4.4.8",
 		"discord-api-types": "^0.37.36",
 		"discord.js": "^14.9.0",
 		"fuse.js": "^6.6.2",
